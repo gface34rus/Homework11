@@ -3,7 +3,7 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
         checkYear(LocalDate.now().getYear());
-        getApp(1, 2023);
+        getApp(1, 2013);
         calculateDelivery(100);
     }
 
@@ -19,18 +19,16 @@ public class Main {
 
     public static void getApp(int oS, int deviceYear) {
         System.out.println("Задача 2");
-        if (oS == 0) {
-            if (deviceYear < LocalDate.now().getYear()) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
-            } else {
-                System.out.println("Установите версию приложения для iOS по ссылке.");
-            }
-        } else if (oS == 1) {
-            if (deviceYear < LocalDate.now().getYear()) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке.");
-            } else {
-                System.out.println("Установите версию приложения для Android по ссылке.");
-            }
+        int currentYear = 2015;
+        if (oS == 0 && deviceYear < currentYear) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
+        } else if (oS == 0 && deviceYear >= currentYear) {
+            System.out.println("Установите версию приложения для iOS по ссылке.");
+
+        } else if (oS == 1 && deviceYear < currentYear) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке.");
+        } else if (oS == 1 && deviceYear >= currentYear) {
+            System.out.println("Установите версию приложения для Android по ссылке.");
         }
         System.out.println();
     }
