@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         checkYear(LocalDate.now().getYear());
         getApp(1, 2013);
-        System.out.println("Потребуется дней: "+calculateDelivery(10));
+        System.out.println("Потребуется дней: " + calculateDelivery(10));
 
 
     }
