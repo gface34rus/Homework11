@@ -4,7 +4,9 @@ public class Main {
     public static void main(String[] args) {
         checkYear(LocalDate.now().getYear());
         getApp(1, 2013);
-        calculateDelivery(100);
+        System.out.println("Потребуется дней: "+calculateDelivery(10));
+
+
     }
 
     public static void checkYear(int year) {
@@ -36,17 +38,14 @@ public class Main {
     public static int calculateDelivery(int deliveryDistance) {
         System.out.println("Задача 3");
         if (deliveryDistance < 20) {
-            System.out.println("Потребуется дней: 1.");
             return 1;
         } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
-            System.out.println("Потребуется дней: 2.");
             return 2;
         } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
-            System.out.println("Потребуется дней: 3.");
             return 3;
         } else {
             System.out.println("В ваш район, доставка не производится.");
-            return 0;
+            return -1;
         }
     }
 }
